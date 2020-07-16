@@ -1,0 +1,96 @@
+body {
+    background-color: black;
+    background-image: url("img/jp-pic.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    height: 98vh;
+    font-family: "Roboto", serif;
+}
+
+.content {
+    width: 50%;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 2%;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.inputContainer {
+    display: flex;
+    justify-content: center;
+    align-self: stretch;
+}
+
+#input {
+    resize: none;
+    font-size: 20px;
+    background: #faf4f3;
+    padding: 20px;
+    margin: 20px;
+}
+
+.howto {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 20px;
+    color: black;
+}
+
+.howto h1 {
+    font-size: 40px;
+    font-weight: 500;
+    color: black;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.footerContent {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    align-items: center;
+}
+
+.footerSeparator {
+    border-color: black;
+    background-color: black;
+    width: 50%;
+    align-self: stretch;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}
+
+.profileLink {
+    color: white;
+    font-size: 15px;
+    padding-top: 20px;
+}
+
+.profileLink:hover {
+    color: #c6480a;
+}
