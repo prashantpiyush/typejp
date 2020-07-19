@@ -5,9 +5,10 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
     height: 98vh;
     font-family: "Roboto", serif;
+    color: white;
 }
 
 .content {
@@ -15,28 +16,42 @@ body {
     backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    padding: 1em;
+}
+
+@media (max-width: 1200px) {
+    .content {
+        width: 65%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .content {
+        width: 75%;
+    }
+}
+
+@media (max-width: 800px) {
+    .content {
+        width: 97%;
+    }
 }
 
 header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 2%;
-    font-weight: 200;
-    font-size: 20px;
 }
 
 main {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .inputContainer {
     display: flex;
-    justify-content: center;
-    align-self: stretch;
+    flex-direction: column;
 }
 
 #input {
@@ -44,20 +59,20 @@ main {
     font-size: 20px;
     background: #faf4f3;
     padding: 20px;
-    margin: 20px;
+    height: auto;
+    width: auto;
 }
 
 .howto {
     font-size: 20px;
-    font-weight: 500;
-    padding: 20px;
-    color: black;
+    font-weight: 600;
+    color: white;
 }
 
 .howto h1 {
     font-size: 40px;
     font-weight: 500;
-    color: black;
+    color: white;
 }
 
 footer {
@@ -69,28 +84,11 @@ footer {
 .footerContent {
     width: 40%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-self: center;
     align-items: center;
 }
 
-.footerSeparator {
-    border-color: black;
-    background-color: black;
-    width: 50%;
-    align-self: stretch;
-}
-
 .icon:hover {
     transform: scale(1.2);
-}
-
-.profileLink {
-    color: white;
-    font-size: 15px;
-    padding-top: 20px;
-}
-
-.profileLink:hover {
-    color: #c6480a;
 }
