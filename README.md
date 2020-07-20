@@ -1,5 +1,7 @@
 # Type in Japanese - Hiragana / Katakana あア
 
+Live at: [https://prashantpiyush.github.io/typejp/](https://prashantpiyush.github.io/typejp/)
+
 ## How to use?
 <ul>
     <li>Type in romaji and characters will automatically get converted.</li>
