@@ -4,50 +4,61 @@
         <title>Type in Japanese</title>
     </head>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" type="text/css" href="public/style.css">
     <body>
         <div class="content">
-            <header>
-                <div class="title">
-                    <h1>Type in Japanese</h1>
-                </div>
-                <div class="desc">
-                    <h2>Hiragana / Katakana あア</h2>
-                </div>
-            </header>
-            <main>
-                <div class="inputContainer">
-                    <textarea id="input" rows=7 cols=75 placeholder="Type here..." autofocus></textarea>
-                </div>
-                <div class="howto">
-                    <h1>How to use?</h1>
-                    <ul>
-                        <li>Type in romaji and characters will automatically get converted.</li>
-                        <li>Use lower case letters for Hiragana:
-                            <ul>
-                                <li>Typing 'shi' will produce - 'し'</li>
-                                <li>Typing 'a' will produce - 'あ'</li>
-                            </ul>
-                        </li>
-                        <li>Use upper case letters for Katakana:
-                            <ul>
-                                <li>Typing 'SHI' will produce - 'シ'</li>
-                                <li>Typing 'A' will produce - 'ア'</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </main>
-            <footer>
-                <div class="footerContent">
-                    <div class="icon-link">
-                        <a href="https://github.com/prashantpiyush/typejp" target="_blank">
-                            <img class="icon" src="public/img/github.svg" height=35px width=35px alt="gihub icon" />
-                        </a>
+            <div class="overlay-filter"></div>
+            <div class="main-content">
+                <div class="overlay-filter"></div>
+                <div class="card-container">
+                    <input type="checkbox" name="change" id="change">
+                    <div class=card id="card">
+                        <div class="card-front">
+                            <div class="front-heading">
+                                <img src="public/img/noun_japanese.svg" id="jp-noun"/>
+                                <h1>Type in Japanese</h1>
+                            </div>
+                            <div class="front-sub-heading">
+                                <h2>Hiragana / Katakana あア</h2>
+                                <div class="show-help" id="show-help"></div>
+                            </div>
+                            <textarea id="input" autofocus></textarea>
+                            <div class="footer-icon"></div>
+                        </div>
+                        <div class="card-back" id="card-back">
+                            <img src="public/img/arrow.svg" height="16px" width="16px" id="go-back"/>
+                            <img src="public/img/help.svg" height="40px" width="40px" id="help-icon"/>
+                            <h1>How to use</h1>
+                            <div class="howto">
+                                <p>Type in romaji and characters will automatically get converted.</p>
+                                <p>Use lower case letters for Hiragana:</p>
+                                <ul>
+                                    <li>Typing 'shi' will produce - 'し'</li>
+                                    <li>Typing 'a' will produce - 'あ'</li>
+                                </ul>
+                                <p>Use lower case letters for Katakana:</p>
+                                <ul>
+                                    <li>Typing 'SHI' will produce - 'シ'</li>
+                                    <li>Typing 'A' will produce - 'ア</li>
+                                </ul>
+                            </div>
+                            <div class="footer-icon"></div>
+                        </div>
                     </div>
                 </div>
-            </footer>
+                <div class="overlay-filter"></div>
+            </div>
+            <div class="overlay-filter"></div>
         </div>
         <script type="text/javascript" src="public/script.js"></script>
+        <script>
+            document.getElementById("show-help").addEventListener('click', function() {
+                document.getElementById("change").checked = true;
+            });
+            document.getElementById("go-back").addEventListener('click', function() {
+                document.getElementById("change").checked = false;
+            });
+        </script>
     </body>
 </html>

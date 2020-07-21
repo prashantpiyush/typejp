@@ -1,94 +1,255 @@
 body {
+    height: 100vh;
     background-color: black;
-    background-image: url("img/jp-pic.jpg");
+    background-image: url("img/jp-pic.png");
     background-size: cover;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 98vh;
-    font-family: "Roboto", serif;
-    color: white;
+    width: 100%;
+    background-repeat: no-repeat;
+    padding: 0%;
+    margin: 0%;
 }
 
 .content {
-    width: 50%;
-    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    padding: 1em;
+    flex-direction: row;
+    align-items: stretch;
 }
 
-@media (max-width: 1200px) {
-    .content {
-        width: 65%;
+.overlay-filter {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(90deg, #B3005999 0%, #810404C9 100%);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    backdrop-filter: blur(5px) contrast(10%);
+    opacity: 0.9;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.card-container {
+    min-width: 460px;
+    min-height: 600px;
+    overflow: hidden;
+    align-self: center;
+    box-shadow: 0 0 15px -1px #000;
+    background-color: transparent;
+    background-image: linear-gradient(178deg, #9018509C 0%, #390615B3 100%);
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+    opacity: 0.7;
+    color: white;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 0.5s ease;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+@-moz-document url-prefix() {
+    .card {
+        backface-visibility: hidden; 
     }
 }
 
-@media (max-width: 1000px) {
-    .content {
-        width: 75%;
-    }
+.card-front {
+    overflow: visible;
+    padding: 7% 10% 5% 10%;
+    width: 80%;
+    height: 91%;
+    backface-visibility: hidden;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-@media (max-width: 800px) {
-    .content {
-        width: 97%;
-    }
+.card-back {
+    overflow: visible;
+    margin: 0;
+    padding: 5% 6% 5% 6%;
+    width: 88%;
+    height: 92%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-self: auto;
 }
 
-header {
+label.img {
+    backface-visibility: hidden;
+    transition: .5s ease;
+}
+
+input {
+    display: none;
+}
+
+input[id="change"]:checked ~ #card {
+    transform: rotateY(-180deg);
+}
+
+img[id="go-back"] {
+    cursor: pointer;
+}
+
+.front-heading {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#jp-noun {
+    width: 38px;
+    height: 48px;
+}
+
+.front-heading h1 {
+    text-align: left;
+    font-family: Montserrat;
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 8px 0 5px 0;
+}
+
+.front-sub-heading {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    margin: 8px;
+    padding: 0;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
+.front-sub-heading h2 {
+    text-align: left;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
 }
 
-.inputContainer {
-    display: flex;
-    flex-direction: column;
+.show-help {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    background-image: url('img/help.svg');
+    background-size: cover;
+}
+
+.show-help:hover {
+    width: 16px;
+    height: 16px;
+    background-image: url('img/help-1.svg');
+    background-size: cover;
 }
 
 #input {
     resize: none;
+    flex: 1 1 auto;
+    background: #000000;
+    background: #31061f;
+    background-origin: padding-box;
+    border-radius: 5px;
+    opacity: 1;
+    padding: 4%;
+    text-align: left;
+    font-family: Roboto;
     font-size: 20px;
-    background: #faf4f3;
-    padding: 20px;
-    height: auto;
-    width: auto;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+}
+
+.footer-icon {
+    width: 40px;
+    height: 40px;
+    margin: 30px 0 2px 0;
+    background-image: url('img/github.svg');
+    align-self: center;
+}
+
+.footer-icon:hover {
+    background-image: url('img/github-1.svg');
+}
+
+#go-back {
+    width: 27px;
+    height: 15px;
+}
+
+#help-icon {
+    width: 48px;
+    height: 48px;
+    align-self: center;
+}
+
+.card-back h1 {
+    text-align: left;
+    font-family: Montserrat;
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 8px 0 5px 0;
+    align-self: center;
 }
 
 .howto {
-    font-size: 20px;
-    font-weight: 600;
-    color: white;
-}
-
-.howto h1 {
-    font-size: 40px;
-    font-weight: 500;
-    color: white;
-}
-
-footer {
+    margin-top: 5%;
+    margin-left: 4%;
+    padding: 0 10% 0 10%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-direction: column;
-}
-
-.footerContent {
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    align-self: center;
     align-items: center;
+    flex: 1 1 auto;
+    text-align: left;
+    font-family: Roboto;
+    font-size: 18px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
 }
 
-.icon:hover {
-    transform: scale(1.2);
+.howto p {
+    align-self: flex-start;
+    margin: 5% 0 2px 0;
+}
+
+.howto ul {
+    align-self: flex-start;
+    margin: 0;
+    font-size: 16px;
+    padding-inline-start: 20px;
 }
