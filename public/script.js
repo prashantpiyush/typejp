@@ -6,9 +6,7 @@ input.addEventListener("input", onInput);
 function onInput(event) {
     const target = event.target;
     const valueInAscii = convertToAsiiFromFullWidth(target.value);
-    // console.log(valueInAscii);
     const ch = toKana(valueInAscii);
-    // console.log(ch);
     target.value = ch;
 }
 
@@ -107,7 +105,7 @@ function toKana(string) {
             let sub = string.substr(idx, l).toLowerCase();
             if("n" !== sub.charAt(0)) {
                 if(isCharConsonant(sub.charAt(0)) && sub.charAt(0) === sub.charAt(1)) {
-                    if(isCharUpperLatin(sub.charAt(0))) {
+                    if(isCharUpperLatin(string.substr(idx, l).charAt(0))) {
                         parsed.push("\u30c3");
                     } else {
                         parsed.push("\u3063");
