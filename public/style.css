@@ -14,8 +14,11 @@ body {
     height: 100%;
     display: flex;
     justify-content: center;
+    -webkit-justify-content: center;
     flex-direction: row;
+    -webkit-flex-direction: row;
     align-items: stretch;
+    -webkit-align-items: stretch;
 }
 
 .overlay-filter {
@@ -23,6 +26,7 @@ body {
     height: 100%;
     display: flex;
     justify-content: center;
+    -webkit-justify-content: center;
     background-image: linear-gradient(90deg, #B3005999 0%, #810404C9 100%);
     background-size: cover;
     background-position: center;
@@ -34,8 +38,11 @@ body {
 .main-content {
     display: flex;
     justify-content: center;
+    justify-content: center;
     flex-direction: column;
+    -webkit-flex-direction: column;
     align-items: stretch;
+    -webkit-align-items: stretch;
 }
 
 .card-container {
@@ -43,6 +50,7 @@ body {
     min-height: 600px;
     overflow: hidden;
     align-self: center;
+    -webkit-align-self: center;
     box-shadow: 0 0 15px -1px #000;
     background-color: transparent;
     background-image: linear-gradient(178deg, #9018509C 0%, #390615B3 100%);
@@ -63,7 +71,9 @@ body {
     -webkit-transition: 0.5s ease;
     display: flex;
     flex-direction: row;
+    -webkit-flex-direction: row;
     align-items: stretch;
+    -webkit-align-items: stretch;
 }
 
 @-moz-document url-prefix() {
@@ -83,7 +93,9 @@ body {
     position: absolute;
     display: flex;
     justify-content: center;
+    -webkit-justify-content: center;
     flex-direction: column;
+    -webkit-flex-direction: column;
 }
 
 .card-back {
@@ -99,8 +111,11 @@ body {
     position: absolute;
     display: flex;
     justify-content: flex-start;
+    -webkit-justify-content: flex-start;
     flex-direction: column;
+    -webkit-flex-direction: column;
     align-self: auto;
+    -webkit-align-self: auto;
 }
 
 label.img {
@@ -126,8 +141,11 @@ img[id="go-back"] {
 .front-heading {
     display: flex;
     justify-content: center;
+    -webkit-justify-content: center;
     flex-direction: column;
+    -webkit-flex-direction: column;
     align-items: center;
+    -webkit-align-items: center;
 }
 
 #jp-noun {
@@ -150,8 +168,11 @@ img[id="go-back"] {
 .front-sub-heading {
     display: flex;
     justify-content: space-between;
+    -webkit-justify-content: space-between;
     flex-direction: row;
+    -webkit-flex-direction: row;
     align-items: center;
+    -webkit-align-items: center;
     margin: 8px;
     padding: 0;
 }
@@ -185,6 +206,7 @@ img[id="go-back"] {
 #input {
     resize: none;
     flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
     background: #000000;
     background: #31061f;
     background-origin: padding-box;
@@ -205,6 +227,7 @@ img[id="go-back"] {
     margin: 30px 0 2px 0;
     background-image: url('img/github.svg');
     align-self: center;
+    -webkit-align-self: center;
 }
 
 .footer-icon:hover {
@@ -220,6 +243,7 @@ img[id="go-back"] {
     width: 48px;
     height: 48px;
     align-self: center;
+    -webkit-align-self: center;
 }
 
 .card-back h1 {
@@ -233,6 +257,7 @@ img[id="go-back"] {
     padding: 0;
     margin: 8px 0 5px 0;
     align-self: center;
+    -webkit-align-self: center;
 }
 
 .howto {
@@ -241,9 +266,13 @@ img[id="go-back"] {
     padding: 0 10% 0 10%;
     display: flex;
     justify-content: flex-start;
+    -webkit-justify-content: flex-start;
     flex-direction: column;
+    -webkit-flex-direction: column;
     align-items: center;
+    -webkit-align-items: center;
     flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
     text-align: left;
     font-family: Roboto;
     font-size: 18px;
@@ -253,11 +282,13 @@ img[id="go-back"] {
 
 .howto p {
     align-self: flex-start;
+    -webkit-align-self: flex-start;
     margin: 5% 0 2px 0;
 }
 
 .howto ul {
     align-self: flex-start;
+    -webkit-align-self: flex-start;
     margin: 0;
     font-size: 16px;
     padding-inline-start: 20px;
