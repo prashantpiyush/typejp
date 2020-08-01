@@ -83,6 +83,13 @@ body {
     }
 }
 
+@supports (-webkit-touch-callout: none) {
+    /* CSS specific to iOS devices */
+    .card {
+        height: 605px;
+    }
+}
+
 .card-front {
     overflow: visible;
     padding: 7% 10% 5% 10%;
